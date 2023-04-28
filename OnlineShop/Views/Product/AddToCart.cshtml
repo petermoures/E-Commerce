@@ -1,0 +1,32 @@
+﻿@model Cart
+<h1>Your Cart</h1>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (product c in Model.Productss)
+        {
+            <tr>
+
+                <td>@c.ProName</td>
+                <td>@c.ProPrice</td>
+                <td>@c.category.CateName</td>
+                <td>@c.Color</td>
+                <td>@Model.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-controller="Product" asp-action="Get" class="btn btn-success mb-1 "> Back to List</a>
+</div>
+

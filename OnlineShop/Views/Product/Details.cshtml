@@ -1,0 +1,50 @@
+﻿@model product
+<h1>Product Details</h1>
+<hr />
+<form >
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row g-2 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5">Name</label>
+                    </div>
+                    <div class="col-auto w-75 ">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.ProName">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-labe pe-5 fw-bold fs-5">Price</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.ProPrice">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5"> Color</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.Color">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5">Type</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" name="Ctype" value="@Model.category.CateName">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="~/photo/@Model.Image" width="450" height="300" />
+            </div>
+        </div>
+    </div>
+</form>
+<div class="mt-5">
+    <a asp-controller="Product" asp-action="Get" class="btn btn-success mb-1" >Back to List</a>
+</div>
+
